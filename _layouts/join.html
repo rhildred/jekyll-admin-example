@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+<p class="text-center">
+  <a href="/CIW/well_being/" class="btn btn-primary btn-lg call_to_action">Well being Survey</a></p>
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+</div>

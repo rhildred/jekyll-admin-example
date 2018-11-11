@@ -1,6 +1,7 @@
 ---
 title: Join
 layout: join
+permalink: "/join/"
 ---
 
 Thank-you for your interest. There is one condition of membership.
