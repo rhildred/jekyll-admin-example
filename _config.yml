@@ -1,14 +1,15 @@
 title: Association of Women Who Develop Software
 email: rhildred@gmail.com
 description: >-
-  Write an awesome description for your new site here. You can edit this line in
-  _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description.
+  Professional development for software developers working in survival mode. I
+  am not even sure of the name of the association yet.
 baseurl: ''
-url: ''
+url: 'https://ysaas.ca'
 twitter_username: rhildred
 github_username: rhildred
 markdown: kramdown
+disqus:
+  shortname: ysaas
 plugins:
   - jekyll-feed
   - jekyll-admin
@@ -16,9 +17,9 @@ plugins:
 collections:
   CIW:
     output: true
-    permalink: /CIW/:path/
+    permalink: '/CIW/:path/'
   Courses_Survey:
     output: true
-    permalink: /Courses_Survey/:path/
+    permalink: '/Courses_Survey/:path/'
 exclude:
-  - 'jekyll-admin'
+  - jekyll-admin

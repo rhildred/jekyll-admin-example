@@ -1,6 +1,6 @@
 ---
 title: Take our Survey
-layout: page
+layout: survey
 ---
 
 Please tell us what you would like for your professional development.

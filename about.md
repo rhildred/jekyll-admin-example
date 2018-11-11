@@ -1,18 +1,9 @@
 ---
 title: About
-layout: page
+layout: about
 permalink: "/about/"
 ---
 
-This is the base, with the admin installed, Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This is the brain child of Joan Sanger and Rich Hildred. Rich is Joan's programmer for [cesandbob.com](http://cesandbob.com), a livelihood development program. Joan and Rich had the idea together for an association that would be a community of software developers that included people on both sides of the make/buy decision.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+In software development survival mode there are very few opportunities for professional development. It is our thesis that professional development can be done in this community.  We would like to test this thesis by tracking participants well being with an annual survey. During the year we will offer courses and other opportunites for development. Outcomes will be evaluated by change in annual well-being survey results.
