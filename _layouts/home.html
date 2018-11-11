@@ -1,14 +1,23 @@
 ---
 layout: default
 ---
+<style>
 
+  .call_to_action{
+    color: white;
+    background: rgb(59, 59, 133);
+  }
+
+</style>
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
-
+<p class="text-center">
+  <a href="/Courses_Survey/courses_survey/" class="btn btn-primary btn-lg call_to_action">Take our needs Survey</a>
+</p>
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
