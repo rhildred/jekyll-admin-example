@@ -9,5 +9,8 @@ layout: default
 
   {{ content }}
 <p class="text-center">
-  <a href="/Courses_Survey/courses_survey/" class="btn btn-primary btn-lg call_to_action">Take our needs Survey</a>
+  <a href="/Courses_Survey/courses_survey/" class="btn btn-primary btn-lg call_to_action">Take our needs Survey</a></p>
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
 </div>
