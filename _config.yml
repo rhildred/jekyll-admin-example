@@ -9,7 +9,16 @@ url: ''
 twitter_username: rhildred
 github_username: rhildred
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-admin
+  - jekyll-seo-tag
+collections:
+  CIW:
+    output: true
+    permalink: /CIW/:path/
+  Courses_Survey:
+    output: true
+    permalink: /Courses_Survey/:path/
+exclude:
+  - 'jekyll-admin'
