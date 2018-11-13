@@ -33,4 +33,6 @@ gem 'rack', '~> 1.6.0'
 
 gem 'jekyll-seo-tag'
 
+gem 'nokogiri'
+
 

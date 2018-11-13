@@ -4,12 +4,30 @@
   {%- include head.html -%}
 
   <body>
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://surveyjs.azureedge.net/1.0.54/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.0.54/survey.css" type="text/css" rel="stylesheet"/>
 
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        {{ content }}
+        {{ content | survey_filter }}
+        <div id="surveyElement"></div>
+        <div id="surveyResult"></div>
+        <script>
+          window.survey = new Survey.Model(oJson);
+
+          survey
+              .onComplete
+              .add(function (result) {
+                  document
+                      .querySelector('#surveyResult')
+                      .innerHTML = "result: " + JSON.stringify(result.data);
+              });
+
+          $("#surveyElement").Survey({model: survey});        
+        </script>
       </div>
     </main>
 
