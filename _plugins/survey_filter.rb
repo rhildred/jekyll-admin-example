@@ -16,7 +16,7 @@ module Jekyll
         doc.search(".highlighter-rouge").each do |src|
             src.remove
         end
-        "<script>oJson={questions:[" + sCode + "]}</script>" + doc.to_html
+        "<script>oJson={" + sCode + "}</script>" + doc.to_html
       end
     end
   end
