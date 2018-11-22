@@ -21,5 +21,8 @@ collections:
   Courses_Survey:
     output: true
     permalink: '/Courses_Survey/:path/'
+  Contributing_Survey:
+    output: true
+    permalink: '/Contributing_Survey/:path/'
 exclude:
   - jekyll-admin
