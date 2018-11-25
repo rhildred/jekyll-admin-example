@@ -17,12 +17,12 @@ plugins:
 collections:
   CIW:
     output: true
-    permalink: '/CIW/:path/'
+    permalink: '/userSurveys/CIW/:path/'
   Courses_Survey:
     output: true
     permalink: '/Courses_Survey/:path/'
   Contributing_Survey:
     output: true
-    permalink: '/Contributing_Survey/:path/'
+    permalink: '/userSurveys/Contributing_Survey/:path/'
 exclude:
   - jekyll-admin

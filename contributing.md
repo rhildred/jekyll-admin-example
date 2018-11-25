@@ -6,7 +6,7 @@ permalink: "/contributing/"
 
 The Url for contributing articles to this site is [https://ysaas.ca/admin/collections/posts](https://ysaas.ca/admin/collections/posts). If you would like to contribute, please click below to tell us why and how.
 
-<p class="text-center"><a href="/Contributing_Survey/become-a-contributor/" class="btn btn-primary btn-lg call_to_action">I would like to contribute</a></p>
+<p class="text-center"><a href="/userSurveys/Contributing_Survey/become-a-contributor/" class="btn btn-primary btn-lg call_to_action">I would like to contribute</a></p>
 
 ![admin url](https://res.cloudinary.com/salesucation-com-inc/image/upload/v1541946412/ysaas.ca/adminUrl.png)
 

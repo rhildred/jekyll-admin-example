@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
-    <script src="https://unpkg.com/jquery"></script>
-    <script src="https://surveyjs.azureedge.net/1.0.54/survey.jquery.js"></script>
-    <link href="https://surveyjs.azureedge.net/1.0.54/survey.css" type="text/css" rel="stylesheet"/>
+<body>
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="https://surveyjs.azureedge.net/1.0.54/survey.jquery.js"></script>
+  <link href="https://surveyjs.azureedge.net/1.0.54/survey.css" type="text/css" rel="stylesheet" />
 
-    {%- include header.html -%}
+  {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content | survey_filter }}
-        <div id="surveyElement"></div>
-        <div id="surveyResult"></div>
-        <script>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="row"><div id="instructions" class="col-md-10">{{ content | survey_filter }}</div></div>
+      <div id="surveyElement"></div>
+      <div id="surveyResult"></div>
+      <script>
+        $(() => {
+          //jQuery is ready at this point
+
+          $.getJSON("/currentUser/", (oResult) =>{
+            if(!oResult.currentUser){
+              $("#instructions").after("<div class=\"col-md-2\"><a href=\"/login/?redirectUrl=" + location.pathname + "\">login first</a></div>")
+            }
+          });
           window.survey = new Survey.Model(oJson);
 
+          survey.data = {
+            "survey": location.pathname
+          }
+
           survey
-              .onComplete
-              .add(function (result) {
+            .onComplete
+            .add(function (result) {
+              $.ajax({
+                url: "/_api/surveyResults/",
+                type: "POST",
+                data: JSON.stringify(result.data),
+                contentType: "application/json; charset=utf-8",
+
+                success: () => {
                   document
-                      .querySelector('#surveyResult')
-                      .innerHTML = "result: " + JSON.stringify(result.data);
+                    .querySelector('#surveyResult')
+                    .innerHTML = "Submitted Successfully";
+
+                }
               });
+            });
+          $("#surveyElement").Survey({ model: survey });
 
-          $("#surveyElement").Survey({model: survey});        
-        </script>
-      </div>
-    </main>
+        });
+      </script>
+    </div>
+  </main>
 
-    {%- include footer.html -%}
+  {%- include footer.html -%}
 
-  </body>
+</body>
 
 </html>
