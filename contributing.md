@@ -8,6 +8,13 @@ The Url for contributing articles to this site is [https://ysaas.ca/admin/collec
 
 <p class="text-center"><a href="/userSurveys/Contributing_Survey/become-a-contributor/" class="btn btn-primary btn-lg call_to_action">I would like to contribute</a></p>
 
+
+or you can pre-buy a course.
+
+
+<p class="text-center"><a href="https://ysaas.ca/Courses_Survey/prebuy_course/" class="btn btn-primary btn-lg call_to_action">More on pre-buying</a></p>
+
+
 ![admin url](https://res.cloudinary.com/salesucation-com-inc/image/upload/v1541946412/ysaas.ca/adminUrl.png)
 
 We use LinkedIn <sup>&copy;</sup> to do single sign on. When you visit [https:/ysaas.ca/admin/](https:/ysaas.ca/admin/) you will be prompted to log in to LinkedIn <sup>&copy;</sup> if you aren't already.
